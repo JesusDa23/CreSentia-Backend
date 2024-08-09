@@ -1,16 +1,15 @@
-const express = require('express'); //llamamos a Express
-const conectarDB = require('./config/db'); //llamamos a la conexión de la base de datos
-const cors = require('cors'); //llamamos a Cors
-const app = express(); //definimos una instancia de express
+const express = require('express');
+const conectarDB = require('./config/db'); 
+const cors = require('cors');
+const app = express(); 
 
-conectarDB(); //conectamos la base de datos
+conectarDB(); 
 
-app.use(cors()) //usamos cors
-app.use(express.json()) //usamos json
+app.use(cors()) 
+app.use(express.json())
 
 app.use('/cresentiaApi', require('./routes/routes'))
 
-// Creamos el servidor
 app.listen(3000, () => {
     console.log('El servidor se esta ejecutando en http://localhost:3000');
 });

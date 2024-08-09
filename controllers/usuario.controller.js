@@ -6,7 +6,8 @@ exports.crearUsuario = async(req, res) => {
         await usuario.save();
         res.status(200).send({ mensaje: 'Usuario creado correctamente', usuario });
     } catch (error) {
-
+        console.log(error);
+        res.status(500).send("Hubo un problema al crear el usuario");
     }
 }
 
