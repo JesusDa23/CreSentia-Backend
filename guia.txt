@@ -1,0 +1,77 @@
+Guia - cosas por hacer CreSentia
+
+Funcionalidades del Backend
+Autenticación y Autorización
+
+Endpoints:
+Registro de usuarios (/register)
+Inicio de sesión (/login)
+Validación de tokens (/validateToken)
+Librerías:
+bcrypt
+jsonwebtoken (JWT)
+express-jwt
+Gestión de Usuarios y Terapeutas
+
+Endpoints:
+CRUD para usuarios (/users)
+CRUD para terapeutas (/therapists)
+Ver perfil del usuario (/users/:id)
+Ver perfil del terapeuta (/therapists/:id)
+Librerías:
+Mongoose
+Creación y Gestión de Avatares (para familias)
+
+Endpoints:
+Crear avatar (/avatars)
+Obtener avatar (/avatars/:id)
+Librerías:
+Mongoose
+Gestión de Planes de Terapia
+
+Endpoints:
+Obtener planes de terapia (/therapyPlans)
+Seleccionar y pagar plan (/therapyPlans/:id/select)
+Librerías:
+Mongoose
+Integración con pasarela de pagos (Stripe, PayPal, etc.)
+Agendamiento de Sesiones
+
+Endpoints:
+Ver calendario del terapeuta (/therapists/:id/calendar)
+Agendar sesión (/sessions)
+Ver sesiones agendadas (/users/:id/sessions)
+Librerías:
+Mongoose
+Perfil del Usuario
+
+Endpoints:
+Ver progreso en la terapia (/users/:id/progress)
+Ver agenda semanal (/users/:id/weeklyAgenda)
+Acceso a recursos terapéuticos (/resources)
+Librerías:
+Mongoose
+Chat y Foro
+Endpoints:
+Enviar mensaje en chat (/chat/sendMessage)
+Ver mensajes del chat (/chat/:id)
+Crear post en el foro (/forum/posts)
+Ver posts del foro (/forum/posts)
+Librerías:
+socket.io (para chat en tiempo real)
+Mongoose
+Gestión de Terapeutas
+
+Endpoints:
+Agendar inducción (/therapists/:id/induction)
+Ver agendamiento con pacientes (/therapists/:id/appointments)
+Librerías:
+Mongoose
+Estructura del Proyecto
+Directorios y Archivos
+controllers/: Controladores para manejar las solicitudes HTTP.
+models/: Definición de las clases de datos (esquemas de Mongoose).
+routes/: Definición de las rutas de la aplicación.
+middleware/: Middleware para autenticación y autorización.
+services/: Lógica de negocio y manipulación de datos.
+config/: Configuraciones adicionales de la aplicación (base de datos, JWT, etc.).
