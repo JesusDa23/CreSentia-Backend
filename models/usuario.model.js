@@ -25,10 +25,10 @@ const UsuarioSchema = mongoose.Schema({
     avatar: {
         type: String
     },
-    role: { 
+    role: {
         type: String,
         enum: ['adulto', 'familia', 'terapeuta'],
-        required: true 
+        required: true
     },
     numero_identificacion: {
         type: String,
